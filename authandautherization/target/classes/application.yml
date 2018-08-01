@@ -1,0 +1,25 @@
+app:
+  jwtExpirationInMs: '604800000'
+  jwtSecret: JWTSuperSecretKey
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+server:
+  port: '8085'
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://mysql-standalone:3306/authenticationdb
+    username: root
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: 'false'
+    time-zone: UTC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
