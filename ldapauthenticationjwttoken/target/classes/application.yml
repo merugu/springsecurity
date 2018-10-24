@@ -1,0 +1,18 @@
+app:
+  jwtExpirationInMs: '604800000'
+  jwtSecret: JWTSuperSecretKey
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+server:
+  port: '8085'
+spring:
+  ldap:
+    embedded:
+      base-dn: dc=innovativeintelli,dc=com
+      ldif: classpath:localldapactivedirectory.ldif
+      port: 12345
+      validation:
+        enabled: false
