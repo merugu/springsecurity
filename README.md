@@ -1,3 +1,15 @@
+# Welcome to the Code With Issues Repository! 🚨🐇
+
+Oh hey there, curious developer! 🕵️‍♂️
+
+Before you dive into this beautiful mess of code, why not check out the open pull request on the current branch? I've integrated CodeRabbit for automated PR reviews, and trust me, watching a bot try to make sense of this code is pure entertainment.
+
+Hop over to the PR, let CodeRabbit do its magic, and maybe, just maybe, you'll save yourself from the horrors within this codebase. 🐰💻
+
+Happy coding (and good luck)! 🍀
+
+
+
 ## springsecurity
 
 The Spring security project is used to Authenticate the user by reading JWT token from request header.
