@@ -12,4 +12,18 @@ private static final String INSERT_DUMMY_TABLE_VALUES =
             "TO_NUMBER(:param10), TO_NUMBER(:param11), TO_NUMBER(:param12), TO_NUMBER(:param13), TO_NUMBER(:param14), " +
             ":param15, :param16, TO_NUMBER(:param17), TO_NUMBER(:param18), TO_NUMBER(:param19), " +
             "TO_NUMBER(:param20))";
+
+   @SuppressWarnings({ "rawtypes" })
+public void insertDummyTableValues(DummyTableValues dummyTableValues) {
+    logger.info(" Inside insertDummyTableValues method ");
+    try {
+        LinkedHashMap<String, Object> param = setQueryParameters(dummyTableValues, true);
+        this.createNativeQueryCUD(INSERT_DUMMY_TABLE_VALUES, param);
+        this.flush();
+        logger.info(" Exiting insertDummyTableValues method ");
+    } catch (Exception exception) {
+        logger.error("DummyTableValuesDAO.insertDummyTableValues(): ", exception);
+        throw new IISSystemException("DummyTableValuesDAO.insertDummyTableValues(): ", exception);
+    }
+}         
 }
