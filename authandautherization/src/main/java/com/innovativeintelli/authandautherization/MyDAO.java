@@ -14,7 +14,7 @@ private static final String INSERT_DUMMY_TABLE_VALUES =
             "TO_NUMBER(:param20))";
 
    @SuppressWarnings({ "rawtypes" })
-public void insertDummyTableValues(DummyTableValues dummyTableValues) {
+public static void insertDummyTableValues(DummyTableValues dummyTableValues) {
     logger.info(" Inside insertDummyTableValues method ");
     try {
         LinkedHashMap<String, Object> param = setQueryParameters(dummyTableValues, true);
