@@ -1,4 +1,4 @@
-public class MyDAO extends T3HibernateSessionManager {
+public class MyDAO extends HibernateSessionManager {
 
 private static final String INSERT_DUMMY_TABLE_VALUES =
             "INSERT INTO DUMMY_TABLE " +
